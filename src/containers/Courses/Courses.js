@@ -19,7 +19,7 @@ function Courses(props) {
                         return (
                             <article className={course} key={course.id}>
                                 <Link to={{
-                                    pathname: `${props.match.url}/${course.id}/`,
+                                    pathname: `${props.match.path}/${course.id}/`,
                                     search: `?title=${course.title}`
                                 }}>
                                     {course.title}
@@ -29,7 +29,7 @@ function Courses(props) {
                     })
                 }
             </section>
-            <Route path={`${props.match.url}/:id`} component={Course}/>
+            <Route path={`${props.match.path}/:id`} component={Course}/>
         </div>
     )
 }
